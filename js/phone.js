@@ -77,11 +77,11 @@ const showPhoneDetails = (phone) => {
     <p><span>Chipset: </span>${phone?.mainFeatures?.chipSet}</p>
     <p><span>Memory: </span>${phone?.mainFeatures?.memory}</p>
     <p><span>Slug: </span>${phone?.slug}</p>
-    <p><span>Release Data: </span>${phone?.releaseDate}</p>
+    <p><span>Release Data: </span>${phone?.releaseDate || 'No Release Data Available'}</p>
     <p><span>Brand: </span>${phone?.brand}</p>
-    <p><span>GPS: </span>${phone?.others?.GPS}</p>
+    <p><span>GPS: </span>${phone?.others?.GPS || 'No GPS Available'}</p>
     `
-
+    // <p><span>GPS: </span>${phone?.others?.GPS ? phone.others.GPS : 'No GPS Available1'}</p>
 
     // show the modal
     show_details_modal.showModal()
